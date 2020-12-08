@@ -1,0 +1,157 @@
+//
+//  Application_PrefixHeader.pch
+//  ApplicationPlat
+//
+//  Created by ljxMac on 2020/8/27.
+//  Copyright © 2020 Apple. All rights reserved.
+//
+
+#ifndef Application_PrefixHeader_pch
+#define Application_PrefixHeader_pch
+// pods
+#import <FFToast.h>
+#import <YYModel.h>
+#import "AFHTTPSessionManager.h"
+#import <Masonry.h>
+#import <MJRefresh.h>
+//#import <SDWebImage/SDWebImage.h>
+//#import <QMUIKit/QMUIKit.h>
+#import <IQKeyboardManager.h>
+#import <MAMapKit/MAMapKit.h>
+
+
+#import "MBProgressHUD+NHAdd.h"
+#import "ZZAdditions.h"
+#import "SVGKImage.h"
+#import "SessionManger.h"
+#import "Center.h"
+#import "CustomAlert.h"
+
+// 创建一个weak变量
+#define WEAKSELF __weak typeof(self) weakSelf = self;
+#define CZHWeakSelf(type)  __weak typeof(type) weak##type = type;
+#define CZHStrongSelf(type)  __strong typeof(type) type = weak##type;
+
+// 获取数据
+#define UNGetObject(key)    ([[NSUserDefaults standardUserDefaults] objectForKey:key] ? [[NSUserDefaults standardUserDefaults] objectForKey:key] : nil)
+
+#define KScreenWidth ([[UIScreen mainScreen]bounds].size.width)
+
+#define KScreenHeight [[UIScreen mainScreen]bounds].size.height
+
+// 适配高度宽度
+#define WidthScale ([[UIScreen mainScreen]bounds].size.width) /375.0f
+#define HeightScale ([[UIScreen mainScreen]bounds].size.height) / 812.0f
+#define APH(R) [[NSString stringWithFormat:@"%.0f", ((R)/812.0f*(KScreenHeight))] floatValue]
+#define APHs(R)  ceilf((R)/812.0f*(KScreenHeight))
+
+
+
+
+//判断iPhoneX
+#define IS_IPHONE_X ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+//判断iPHoneXr
+#define IS_IPHONE_Xr ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) : NO)
+//判断iPhoneXs
+#define IS_IPHONE_Xs ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+//判断iPhoneXs Max
+#define IS_IPHONE_Xs_Max ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) : NO)
+//判断iPhone8
+#define IS_IPHONE_8 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+//判断iPhone8p
+#define IS_IPHONE_8P ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+
+//判断iPhoneX系列
+#define IS_IPHONE_Xx (KScreenHeight >= 812) // 812是iPhoneX的高度
+//iPhoneX系列
+#define Height_StatusBar ((IS_IPHONE_X==YES || IS_IPHONE_Xr ==YES || IS_IPHONE_Xs== YES || IS_IPHONE_Xs_Max== YES) ? 44.0 : 20.0)
+#define Height_NavBar ((IS_IPHONE_X==YES || IS_IPHONE_Xr ==YES || IS_IPHONE_Xs== YES || IS_IPHONE_Xs_Max== YES) ? 88.0 : 64.0)
+#define Height_TabBar ((IS_IPHONE_X==YES || IS_IPHONE_Xr ==YES || IS_IPHONE_Xs== YES || IS_IPHONE_Xs_Max== YES) ? 83.0 : 49.0)
+
+// 颜色
+#define ColorString(html) [UIColor colorWithHex:html]
+#define KHistorySearchPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"PYSearchhistories.plist"]
+
+#define KColor(r,g,b) [UIColor colorWithRed:(r/255.0) green:(g/255.0) blue:(b/255.0) alpha:1.0]
+// 默认颜色
+#define DefaColor ColorString(@"#0091FF")
+// 字体
+#define PingFangSCRegular(font) [UIFont fontWithName:@"PingFangSC-Regular" size:font * KScreenWidth / 375]
+#define PingFangSCLight(font) [UIFont fontWithName:@"PingFangSC-Light" size:font * KScreenWidth / 375]
+#define PingFangSCMedium(font) [UIFont fontWithName:@"PingFangSC-Medium" size:font * KScreenWidth / 375]
+#define PingFangSCSemibold(font) [UIFont fontWithName:@"PingFangSC-Semibold" size:font * KScreenWidth / 375]
+
+
+
+
+
+// 本地服务器
+#define BASEURL UNGetObject(@"base_url")
+
+//api/v1/login
+// 登录
+#define POSTLOGIN [NSString stringWithFormat:@"%@/api/login",BASEURL]
+
+//api/v1/DeviceCategory
+// 获取全部设备类型
+#define DEVICECATEGORY [NSString stringWithFormat:@"%@/api/device/category",BASEURL]
+
+//api/breaker/pagination
+// 获取断路器网关集合 (分页)
+#define PAGINATION [NSString stringWithFormat:@"%@/api/breaker/pagination",BASEURL]
+
+//api/breaker/totalCount
+// 查询总数
+#define TOTALCOUNT [NSString stringWithFormat:@"%@/api/breaker/totalCount",BASEURL]
+
+
+
+//api/breaker/command/close
+// 合闸
+
+#define BREAKERCLOSE [NSString stringWithFormat:@"%@/api/breaker/command/close",BASEURL]
+
+//api/breaker/command/open
+// 开闸
+#define BREAKEROPEN [NSString stringWithFormat:@"%@/api/breaker/command/open",BASEURL]
+
+
+//api/IoTHub
+// 获取系统中所有IoTHub文档 按名称正序排列
+#define IOTHUBLIST [NSString stringWithFormat:@"%@/api/IoTHub",BASEURL]
+
+///api/breaker/iothub/regist/state
+// IoTHub注册验证
+#define IOTHUBREGIATERAVAILE [NSString stringWithFormat:@"%@/api/breaker/iothub/regist/state",BASEURL]
+
+//api/breaker
+// 安装注册
+#define BREAKERREGISTER [NSString stringWithFormat:@"%@/api/breaker",BASEURL]
+
+///api/breaker/bind
+// 绑定子断路器
+#define BINDCHINDBREAKER [NSString stringWithFormat:@"%@/api/breaker/command/bind",BASEURL]
+//api/breaker/unbind
+// 解绑子断路器
+#define UNBINDCHINDBREAKER [NSString stringWithFormat:@"%@/api/breaker/command/unbind",BASEURL]
+
+
+
+//api/breaker/command/period
+//更改上报周期
+#define COMMANDPERIOD [NSString stringWithFormat:@"%@/api/breaker/command/period",BASEURL]
+
+//api/breaker/command/auto
+//自动模式下发
+#define COMMANDAUTO [NSString stringWithFormat:@"%@/api/breaker/command/auto",BASEURL]
+///api/breaker/command/manual
+//手动模式下发
+#define COMMANDMANUAL [NSString stringWithFormat:@"%@/api/breaker/command/manual",BASEURL]
+
+
+
+//api/breaker/location
+// 更改位置
+#define LOACTION [NSString stringWithFormat:@"%@/api/breaker/location",BASEURL]
+
+#endif /* Application_PrefixHeader_pch */

@@ -1,0 +1,120 @@
+/* 
+  Localizable.strings
+  CORE
+
+  Created by ljxMac on 2020/10/14.
+  Copyright © 2020 Apple. All rights reserved.
+*/
+
+
+
+// 登录界面
+
+"loginTitle" = "Log in";
+"loginAccount" = "User";
+"loginPwd" = "Password";
+"loginRememberBtn" = "  Remember password";
+"loginBtn" = "OK";
+
+
+
+// 登录提示
+"loginPhoneAlert" = "Please enter the correct phone number";
+"loginPwdAlert" = "Please enter password";
+"loginAlert" = "Logging in...";
+"loginPhoneKongAlert" = "Account cannot be empty";
+"loginPwdKongAlert" = "Password can not be blank";
+"loginPhoneTeshuAlert" = "Account cannot contain special characters";
+"loginPwdTeshuAlert" = "Password cannot contain special characters";
+
+
+
+
+// 服务器指向
+"testPort" = "Port";
+"testProtocol" = "Protocol";
+"testVali" = "Validation Server";
+"testBtn" = "OK";
+
+// 设置
+"setTitle" = "App settings";
+"setMessageTitle" = "Message";
+"setMessageSub" = "Receive an alert message push";
+"setLocationTitle" = "Location";
+"setLocationSub" = "Allows apps to access mobile location services";
+"setVersionTitle" = "Version";
+"setVersionSub" = "The current version：";
+"setVersionCheckBtn" = "Check the version";
+"setBtn" = "Log out";
+"setLogOutAlert" = "Confirm to log out? ";
+"setDefineBtn" = "ok";
+"setCancelBtn" = "cancel";
+"setAlertBtn" = "This feature is not yet available";
+
+// 设备类型
+"typeTitle" = "Device type";
+"typeSearchTitle" = "Device type name";
+"typeSubtitle" = "Current item";
+"typeRecentSearch" = "Recent search";
+"typeNoHistory" = "No search history";
+"typePopularSearches" = "popular searches";
+
+// 设备
+"deviceMACSearchTitle" = "Main_breaker MAC address";
+"deviceTotalTitle" = "Total：";
+
+// 单个断路器概况
+
+"breakerTypeTitle" = "Automatic";
+"breakerTypeMTitle" = "Manual";
+
+"breakerGatewayTitle" = "Gateway";
+"breakerAtuoIcon" = "A";
+"breakerManualIcon" = "M";
+"breakerMotherIcon" = "M";
+"breakerChildIcon" = "B";
+"breakerOnline" = "online";
+"breakerOffline" = "offline";
+
+// 断路器详情
+"breakerDeitalStateTitle" = "State";
+"breakerDeitalTimerTitle" = "Timer";
+"breakerDeitalAttributeTitle" = "Attribute";
+"breakerDeitalAlarmsTitle" = "Alarms";
+"breakerDeitalOperationTitle" = "Operation";
+
+"breakerDeitalOpen" = "Open";
+"breakerDeitalClose" = "Close";
+"breakerDeitalManual" = "Manual";
+"breakerDeitalAutomatic" = "Automatic";
+"breakerDeitalCondition" = "Breaker condition";
+"breakerDeitalSwitch" = "Mode switch";
+"breakerDeitalElectricity" = "Real-time electricity";
+"breakerDeitalPower" = "Real-time power";
+"breakerDeitalVoltage" = "Voltage";
+"breakerDeitalTemperature" = "Temperature";
+"breakerDeitalCurrent" = "Current";
+"breakerDeitalAlarm" = "Alarm log";
+
+
+//"mainText" = "English";
+//"返回" = "Back";
+//"主页" = "Home";
+//"跟随系统" = "Follow System";
+//"中文" = "Chinese";
+//"英文" = "English";
+//"我的" = "Me";
+//"切换语言" = "Change Language";
+//"收藏" = "Collection";
+//"课程" = "Curriculum";
+//"搜索" = "Search";
+//"修改字号" = "Change Font Size";
+//"推荐" = "Recommended";
+//"精华" = "Essence";
+//"图片" = "Picture";
+//"声音" = "Voice";
+//"视频" = "Video";
+//"福利" = "Welfare";
+//"转子动画" = "RotateAnimation";
+//"旋转图片" = "RotatingPicture";
+//"自定义密码框" = "CustomPassword";

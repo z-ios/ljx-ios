@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  CORE
+
+  Created by ljxMac on 2020/10/14.
+  Copyright © 2020 Apple. All rights reserved.
+*/
+CFBundleDisplayName = "ApplicationPlatform";

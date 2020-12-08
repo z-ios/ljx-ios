@@ -1,0 +1,32 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+use_frameworks!
+
+use_modular_headers!
+
+target 'ApplicationPlat' do
+  pod 'AFNetworking'
+  pod 'MBProgressHUD'
+  pod 'YYModel'
+  pod 'Masonry'
+  pod 'FFToast'
+  pod 'MJRefresh'
+  pod 'IQKeyboardManager'
+  #pod 'Charts'
+  #pod 'ChartsRealm'
+  #pod 'UITableView-FDTemplateLayoutCell'
+  pod 'IconFont'
+#  pod 'TYAlertController'
+  pod 'SVGKit'
+  pod 'BTTransition'
+#  pod 'SDWebImage'
+#  pod 'QMUIKit/QMUIComponents/QMUISearchController'
+  pod 'AMap3DMap'
+  pod 'AMapSearch'
+  pod 'AMapLocation'
+  pod 'HighlightedSearch'
+#  pod 'TTSwitch'
+  pod 'YYCategories'
+  pod 'YCShadowView'
+#  pod 'RDVTabBarController'
+end

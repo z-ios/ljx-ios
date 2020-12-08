@@ -1,0 +1,89 @@
+/* 
+  Localizable.strings
+  CORE
+
+  Created by ljxMac on 2020/10/14.
+  Copyright © 2020 Apple. All rights reserved.
+*/
+
+// 登录界面
+"loginTitle" = "登录";
+"loginAccount" = "帐号";
+"loginPwd" = "密码";
+"loginRememberBtn" = "  记住密码";
+"loginBtn" = "登录";
+
+// 登录提示
+"loginPhoneAlert" = "请输入正确手机号";
+"loginPwdAlert" = "请输入密码";
+"loginAlert" = "正在登录...";
+"loginPhoneKongAlert" = "帐号不能为空";
+"loginPwdKongAlert" = "密码不能为空";
+"loginPhoneTeshuAlert" = "帐号不能含有特殊字符";
+"loginPwdTeshuAlert" = "密码不能含有特殊字符";
+
+
+
+// 服务器指向
+"testPort" = "端口";
+"testProtocol" = "协议";
+"testVali" = "测试服务器";
+"testBtn" = "确定";
+
+// 设置
+"setTitle" = "应用设置";
+"setMessageTitle" = "通知";
+"setMessageSub" = "接收告警消息推送";
+"setLocationTitle" = "位置";
+"setLocationSub" = "允许App访问手机定位服务";
+"setVersionTitle" = "版本";
+"setVersionSub" = "当前版本：";
+"setVersionCheckBtn" = "检查版本";
+"setBtn" = "退出";
+"setLogOutAlert" = "确认退出登录？";
+"setDefineBtn" = "确定";
+"setCancelBtn" = "取消";
+"setAlertBtn" = "此功能暂未开放";
+
+// 设备类型
+"typeTitle" = "设备类型";
+"typeSearchTitle" = "设备类型名称";
+"typeSubtitle" = "当前项";
+"typeRecentSearch" = "最近搜索";
+"typeNoHistory" = "无搜索历史";
+"typePopularSearches" = "热门搜索";
+
+// 设备
+"deviceMACSearchTitle" = "母开关MAC地址";
+"deviceTotalTitle" = "总数：";
+// 单个断路器概况
+
+"breakerTypeTitle" = "自动模式";
+"breakerTypeMTitle" = "手动模式";
+
+"breakerGatewayTitle" = "网关属性";
+"breakerAtuoIcon" = "自动";
+"breakerManualIcon" = "手动";
+"breakerMotherIcon" = "母";
+"breakerChildIcon" = "子";
+"breakerOnline" = "在线";
+"breakerOffline" = "离线";
+// 断路器
+// 断路器详情
+"breakerDeitalStateTitle" = "状态";
+"breakerDeitalTimerTitle" = "定时器";
+"breakerDeitalAttributeTitle" = "属性";
+"breakerDeitalAlarmsTitle" = "告警日志";
+"breakerDeitalOperationTitle" = "操作日志";
+"breakerDeitalOpen" = "跳闸";
+"breakerDeitalClose" = "合闸";
+"breakerDeitalManual" = "手动模式";
+"breakerDeitalAutomatic" = "自动模式";
+"breakerDeitalCondition" = "开合闸状态";
+"breakerDeitalSwitch" = "模式切换";
+"breakerDeitalElectricity" = "实时电量";
+"breakerDeitalPower" = "实时功率";
+"breakerDeitalVoltage" = "电压";
+"breakerDeitalTemperature" = "温度";
+"breakerDeitalCurrent" = "电流";
+"breakerDeitalAlarm" = "告警日志";
